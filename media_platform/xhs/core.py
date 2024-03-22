@@ -58,7 +58,7 @@ class XiaoHongShuCrawler(AbstractCrawler):
             # add a cookie attribute webId to avoid the appearance of a sliding captcha on the webpage
             await self.browser_context.add_cookies([{
                 'name': "webId",
-                'value': "xxx123",  # any value
+                'value': "abc561",  # any value
                 'domain': ".xiaohongshu.com",
                 'path': "/"
             }])

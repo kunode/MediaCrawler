@@ -4,7 +4,7 @@ KEYWORDS = "python,golang"
 LOGIN_TYPE = "qrcode"  # qrcode or phone or cookie
 COOKIES = ""
 SORT_TYPE = "popularity_descending"  # 具体值参见media_platform.xxx.field下的枚举值，展示只支持小红书
-CRAWLER_TYPE = "search" # 爬取类型，search(关键词搜索) | detail(帖子相亲)| creator(创作者主页数据)
+CRAWLER_TYPE = "detail"  # 爬取类型，search(关键词搜索) | detail(帖子相亲)| creator(创作者主页数据)
 
 # 是否开启 IP 代理
 ENABLE_IP_PROXY = False
@@ -13,7 +13,7 @@ ENABLE_IP_PROXY = False
 IP_PROXY_POOL_COUNT = 2
 
 # 设置为True不会打开浏览器（无头浏览器），设置False会打开一个浏览器（小红书如果一直扫码登录不通过，打开浏览器手动过一下滑动验证码）
-HEADLESS = True
+HEADLESS = False
 
 # 是否保存登录状态
 SAVE_LOGIN_STATE = True
@@ -28,16 +28,14 @@ USER_DATA_DIR = "%s_user_data_dir"  # %s will be replaced by platform name
 CRAWLER_MAX_NOTES_COUNT = 20
 
 # 并发爬虫数量控制
-MAX_CONCURRENCY_NUM = 4
+MAX_CONCURRENCY_NUM = 1
 
 # 是否开启爬评论模式, 默认不开启爬评论
 ENABLE_GET_COMMENTS = False
 
 # 指定小红书需要爬虫的笔记ID列表
 XHS_SPECIFIED_ID_LIST = [
-    "6422c2750000000027000d88",
-    "64ca1b73000000000b028dd2",
-    "630d5b85000000001203ab41",
+    "65fac362000000001302643f",
     # ........................
 ]
 
@@ -70,6 +68,6 @@ WEIBO_SPECIFIED_ID_LIST = [
 
 # 指定小红书创作者ID列表
 XHS_CREATOR_ID_LIST = [
-    "63e36c9a000000002703502b",
+    "5f4dcff30000000001001bbd",
     # ........................
 ]
